@@ -22,5 +22,5 @@ jobs:
           PORT: ${{ secrets.SERVER_PORT }}
         run: |
           sshpass -p "${PASSWORD}" ssh -p ${PORT} -o StrictHostKeyChecking=no ${USER}@${HOST} << 'EOF'
-            echo "hello"
+            echo "hello" >> test.txt
           EOF
