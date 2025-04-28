@@ -25,6 +25,7 @@ jobs:
             cd /root/ERP_System/
             git pull
             cd /root/ERP_System/view/
+            apt install npm
             npm install
             npm run build
           EOF
