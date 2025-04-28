@@ -28,4 +28,5 @@ jobs:
             apt install npm
             npm install
             npm run build
+            npm run preview
           EOF
