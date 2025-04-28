@@ -27,5 +27,6 @@ jobs:
             cd /root/ERP_System/view/
             apt install npm
             npm install
-            npm run build 2>&1
-            nohup npm run preview 2>&1 EOF
+            nohup npm run build 2>&1 &
+            nohup npm run preview 2>&1 &
+            EOF
