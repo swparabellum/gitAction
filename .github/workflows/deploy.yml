@@ -22,5 +22,6 @@ jobs:
           PORT: ${{ secrets.SERVER_PORT }}
         run: |
           sshpass -p "${PASSWORD}" ssh -p ${PORT} -o StrictHostKeyChecking=no ${USER}@${HOST} << 'EOF'
-            echo "hello" >> test.txt
+            cd /root/ERP_System/
+            git pull
           EOF
