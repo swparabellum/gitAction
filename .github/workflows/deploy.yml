@@ -28,4 +28,19 @@ jobs:
             apt install npm
             npm install
             nohup npm run build 2>&1 &
+            cd /root/ERP_System/gateway/
+            mvn clean package
+            mv /root/ERP_System/gateway/gateway-0.0.1-SNAPSHOT.jar /root/docker/gateway.jar
+            cd /root/ERP_System/mfr/
+            mvn clean package
+            
+            cd /root/ERP_System/oauth/
+            mvn clean package
+            
+            cd /root/ERP_System/stg/
+            mvn clean package
+            
+            cd /root/ERP_System/trs/
+            mvn clean package
+            
             EOF
