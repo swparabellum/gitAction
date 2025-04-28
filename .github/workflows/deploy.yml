@@ -24,4 +24,7 @@ jobs:
           sshpass -p "${PASSWORD}" ssh -p ${PORT} -o StrictHostKeyChecking=no ${USER}@${HOST} << 'EOF'
             cd /root/ERP_System/
             git pull
+            cd /root/ERP_System/view/
+            npm install
+            npm run build
           EOF
