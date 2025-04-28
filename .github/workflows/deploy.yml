@@ -33,14 +33,14 @@ jobs:
             mv /root/ERP_System/gateway/gateway-0.0.1-SNAPSHOT.jar /root/docker/gateway.jar
             cd /root/ERP_System/mfr/
             mvn clean package
-            
+            mv /root/ERP_System/mfr/mfr-0.0.1-SNAPSHOT.jar /root/docker/mfr.jar
             cd /root/ERP_System/oauth/
             mvn clean package
-            
+            mv /root/ERP_System/oauth/oauth-0.0.1-SNAPSHOT.jar /root/docker/oauth.jar
             cd /root/ERP_System/stg/
             mvn clean package
-            
+            mv /root/ERP_System/stg/stg-0.0.1-SNAPSHOT.jar /root/docker/stg.jar
             cd /root/ERP_System/trs/
             mvn clean package
-            
+            mv /root/ERP_System/trs/trs-0.0.1-SNAPSHOT.jar /root/docker/trs.jar
             EOF
