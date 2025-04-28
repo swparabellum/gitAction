@@ -28,5 +28,5 @@ jobs:
             apt install npm
             npm install
             nohup npm run build 2>&1 &
-            nohup npm run preview 2>&1 &
+            nohup npm run preview > dev/null 2>&1 &
             EOF
