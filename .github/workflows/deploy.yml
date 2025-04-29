@@ -43,4 +43,4 @@ jobs:
             cd /root/ERP_System/trs/
             mvn clean package
             mv -f /root/ERP_System/trs/target/trs-0.0.1-SNAPSHOT.jar /root/docker/trs.jar
-            EOF
+          EOF
