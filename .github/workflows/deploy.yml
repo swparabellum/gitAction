@@ -30,7 +30,7 @@ jobs:
             nohup npm run build 2>&1 &
             cd /root/ERP_System/gateway/
             mvn clean package
-            mv -f /root/ERP_System/gateway/target/gateway-0.0.1-SNAPSHOT.jar /root/docker/gateway.jar
+            mv -f /root/ERP_System/gateway/target/gateway-0.0.1-SNAPSHOT.jar /root/docker/gateway/gateway.jar
             cd /root/ERP_System/mfr/
             mvn clean package
             mv -f /root/ERP_System/mfr/target/mfr-0.0.1-SNAPSHOT.jar /root/docker/mfr.jar
