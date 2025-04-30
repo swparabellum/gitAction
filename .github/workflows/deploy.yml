@@ -30,22 +30,22 @@ jobs:
             nohup npm run build 2>&1 &
             cd /root/ERP_System/gateway/
             mvn clean package
-            mv -f /root/ERP_System/gateway/target/gateway-0.0.1-SNAPSHOT.jar /root/docker/gateway/gateway.jar
-            chmod 755 gateway.jar
+            mv -f /root/ERP_System/gateway/target/gateway-0.0.1-SNAPSHOT.jar /root/docker/gateway.jar
+            chmod 755 /root/docker/gateway.jar
             cd /root/ERP_System/mfr/
             mvn clean package
             mv -f /root/ERP_System/mfr/target/mfr-0.0.1-SNAPSHOT.jar /root/docker/mfr.jar
-            chmod 755 mfr.jar
+            chmod 755 /root/docker/mfr.jar
             cd /root/ERP_System/oauth/
             mvn clean package
             mv -f /root/ERP_System/oauth/target/oauth-0.0.1-SNAPSHOT.jar /root/docker/oauth.jar
-            chmod 755 oauth.jar
+            chmod 755 /root/docker/oauth.jar
             cd /root/ERP_System/stg/
             mvn clean package
             mv -f /root/ERP_System/stg/target/stg-0.0.1-SNAPSHOT.jar /root/docker/stg.jar
-            chmod 755 stg.jar
+            chmod 755 /root/docker/stg.jar
             cd /root/ERP_System/trs/
             mvn clean package
             mv -f /root/ERP_System/trs/target/trs-0.0.1-SNAPSHOT.jar /root/docker/trs.jar
-            chmod 755 trs.jar
+            chmod 755 /root/docker/trs.jar
           EOF
