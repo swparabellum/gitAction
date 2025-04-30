@@ -5,9 +5,6 @@ on:
     branches:
       - main  # main 브랜치에 push 실행
 
-env:
-  directory: /root/docker/
-
 jobs:
   deploy-main:
     if: github.ref == 'refs/heads/main'  # main 브랜치일 때만 실행
@@ -38,17 +35,17 @@ jobs:
             cd /root/ERP_System/mfr/
             mvn clean package
             mv -f /root/ERP_System/mfr/target/mfr-0.0.1-SNAPSHOT.jar /root/docker/mfr.jar
-            chmod 755 ${directory}mfr.jar
+            chmod 755 /root/docker/mfr.jar
             cd /root/ERP_System/oauth/
             mvn clean package
             mv -f /root/ERP_System/oauth/target/oauth-0.0.1-SNAPSHOT.jar /root/docker/oauth.jar
-            chmod 755 ${directory}oauth.jar
+            chmod 755 /root/docker/oauth.jar
             cd /root/ERP_System/stg/
             mvn clean package
             mv -f /root/ERP_System/stg/target/stg-0.0.1-SNAPSHOT.jar /root/docker/stg.jar
-            chmod 755 ${directory}stg.jar
+            chmod 755 /root/docker/stg.jar
             cd /root/ERP_System/trs/
             mvn clean package
             mv -f /root/ERP_System/trs/target/trs-0.0.1-SNAPSHOT.jar /root/docker/trs.jar
-            chmod 755 ${directory}trs.jar
+            chmod 755 /root/docker/trs.jar
           EOF
